@@ -1,6 +1,6 @@
 # Wedding Invitation Site
 
-🔗 **[Live demo](https://your-site-name.netlify.app)**
+🔗 **[Live demo]([https://your-site-name.netlify.app](https://wedding-invitation-demo-abc.netlify.app/))**
 
 A single-page wedding invitation and RSVP site, built from scratch with plain HTML, CSS and
 JavaScript. No frameworks, no build step, no dependencies — open the HTML file and it runs.
