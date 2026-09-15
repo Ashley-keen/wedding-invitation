@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting Married!</title>
+    <link rel="stylesheet" href="/style.css">
+    <script>function toggleFaq(btn) {
+        const item = btn.closest(".faq-item");
+        const isOpen = item.classList.contains("open");
+        // Close any currently open FAQ items
+        document.querySelectorAll(".faq-item.open")
+        .forEach(el => el.classList.remove("open"));
+        // If this item was not already open, open it
+        if (!isOpen) item.classList.add("open");
+        }
+    </script>
+</head>
+<body>
+
+<!--Password section-->    
+    <div id="password-overlay">
+        <div class="pw-corner tl">&#10087;</div>
+        <div class="pw-corner tr">&#10087;</div>
+        <div class="pw-corner bl">&#10087;</div>
+        <div class="pw-corner br">&#10087;</div>
+        <div class="pw-card">
+            <div class="pw-seal">&#10022;</div>
+            <p class="pw-eyebrow">You're invited</p>
+            <span class="pw-names">Name</span>
+            <span class="pw-amp">&amp;</span>
+            <span class="pw-names">Name</span>
+            <div class="pw-divider"><span>&#9829;</span></div>
+                <label class="pw-label" for="pw-input"> Enter your password to view the wedding details
+                </label>
+            <input class="pw-input" id="pw-input" type="password"
+            placeholder="Password"
+            onkeydown="if(event.key==='Enter') checkPassword()">
+            <button class="pw-btn" onclick="checkPassword()">Enter &#10022;</button>  
+
+            <!--Error message if password is incorrect-->
+            <p class="pw-error" id="pw-error"> Hmm, that's not quite right — try again!</p>
+            <p class="pw-hint">Check your invitation for the password.</p>
+        </div>
+    </div>
+
+<div id="page-content">
+
+<!--Nav Bar-->
+    <nav> 
+        <a href="#details">Details</a>
+            <span class="nav-seal">✦</span>
+        <a href="#timeline">Timeline</a>
+            <span class="nav-seal">✦</span>        
+        <a href="#notes">Things to know</a>
+            <span class="nav-seal">✦</span>        
+        <a href="#faq">FAQs</a>
+            <span class="nav-seal">✦</span>
+        <a href="#rsvp">RSVP</a>
+    </nav>
+
+<!--Main 'invitation' section--> 
+    <section class="hero">
+        <div class="hero-inner">
+            <div class="stamp-frame">
+                <div class="wax-seal">✦</div>
+                <p class="hero-eyebrow">We're getting married!</p>
+                <span class="hero-script">Please join us to celebrate the wedding of</span>
+                <span class="hero-names">Name</span>
+                <span class="hero-amp">&amp;</span>
+                <span class="hero-names">Name</span>
+                    <div class="hero-divider">
+                        <span class="hero-divider-seal">♥</span>
+                    </div>
+                <div class="hero-date">
+                    Date<br>
+                    day month year
+                    <small>At time · location </small>
+                </div>
+            </div>
+        </div>
+    <div class="scroll-hint">Scroll</div>
+    </section>   
+    
+<!--Details section-->    
+    <section class="section section--tinted" id="details">
+        <div class="sec-inner--wide">
+            <div class="sec-header">
+                <span class="ornament">✦ ✦ ✦</span>
+                <span class="sec-tag">The Details</span>
+                <h2>Everything you need to know</h2>
+                <p class="sec-sub">All the important information in one place.</p>
+            </div>
+            <div class="details-grid">
+
+<!--Venue card-->
+            <div class="d-card">
+                <span class="d-card-icon">■</span>
+                <h3>Venue</h3>
+                <address>location<br>location<br>city</address>
+                <p><a href="https://www.google.com/maps" target="_blank">Open in Google Maps →</a></p>
+            </div>
+
+<!--Accomodation card-->
+            <div class="d-card">
+                <span class="d-card-icon">■</span>
+                <h3>Accommodation</h3>
+                <p>If accomodation is required, <strong>name</strong> do have rooms, subject to availability.</p>
+                <div class="discount-box"> Click <a href="https://www.booking.com/index.en-gb.html?aid=309654;label=en-gb-hotels-TSrzVaflFlctr6joGsl_6wS696888282472:pl:ta:p1:p2:ac:ap:neg:fi:tikwd-11212371:lp9181181:li:dec:dm:ppccp=UmFuZG9tSVYkc2RlIyh9YcsZ-Id2vkzIfTmYhvC5HOg;ws=&gad_source=1&gad_campaignid=20967681838&gbraid=0AAAAAD_Ls1JYIx3oNmlz9oV_1Exz7pRA8&gclid=CjwKCAjw2aPVBhBkEiwA0Cpttzn2f_Z4dwV-EyGWi4OK8P-K7RvN6X8C9q9MdZoWF7onwNY1lfVf_BoCir8QAvD_BwE&chal_t=1789494528500&force_referer=https%3A%2F%2Fwww.google.com%2F"
+                    target="_blank">here</a> to book accomodation.</div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+<!--Timeline Section-->    
+    <section class="section section--tinted" id="timeline">
+        <div class="tl-item">
+            <div class="tl-time">time</div>
+            <div class="tl-spine">
+                <div class="tl-dot"></div>
+                <div class="tl-line"></div>
+            </div>
+           
+        <div class="tl-content">
+            <h3>Ceremony</h3>
+                <p>The bit that makes it all official. Tissues encouraged.</p>
+            </div>
+        </div>
+
+        <div class="tl-item">
+            <div class="tl-time">time</div>
+            <div class="tl-spine">
+                <div class="tl-dot"></div>
+                <div class="tl-line"></div>
+        </div>
+
+        <div class="tl-content">
+            <h3>Cocktail hour</h3>
+                <p>Grab a glass and prepare to celebrate! Canapés are on us (｡•̀ᴗ-)</p>
+            </div>
+        </div>
+
+        <div class="tl-item">
+            <div class="tl-time">time</div>
+            <div class="tl-spine">
+                <div class="tl-dot"></div>
+                <div class="tl-line"></div>
+        </div>
+
+        <div class="tl-content">
+            <h3>Reception</h3>
+                <p>Join us for a lifetime of happiness</p>
+            </div>
+        </div>
+    </section>
+
+<!--Notes section-->
+    <section class="section section--tinted" id="notes">
+        <div class="note-card" id="notes">
+            <h3>A little note on little ones…</h3>
+            <ul class="note-list">
+                <li>We've made the decision to keep the day adults-only.</li>
+                <li>We completely understand if this affects your plans!</li>
+            </ul>
+        </div>
+    </section>
+
+<!--FAQ Section-->
+    <section class="section" id="faq">
+        <div class="sec-inner">
+            <div class="sec-header">
+                <span class="ornament">✦ ✦ ✦</span>
+                <span class="sec-tag">FAQs</span>
+                <h2>Questions? We've got you.</h2>
+                <p class="sec-sub">Can't find what you're looking for? Drop us a message.</p>
+            </div>
+
+<!--List items-->            
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-q" onclick="toggleFaq(this)">What time should I arrive? 
+                        <span class="faq-chevron">&#9660;</span>
+                    </button>
+                        <div class="faq-a">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-q" onclick="toggleFaq(this)">Is there parking at the venue? 
+                        <span class="faq-chevron">&#9660;</span>
+                    </button>
+                        <div class="faq-a">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-q" onclick="toggleFaq(this)">How do I get the hotel discount? 
+                        <span class="faq-chevron">&#9660;</span>
+                    </button>
+                        <div class="faq-a">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-q" onclick="toggleFaq(this)">What is the dress code? 
+                        <span class="faq-chevron">&#9660;</span>
+                    </button>
+                        <div class="faq-a">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-q" onclick="toggleFaq(this)">I have a dietary requirement - is that okay? 
+                        <span class="faq-chevron">&#9660;</span>
+                    </button>
+                        <div class="faq-a">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-q" onclick="toggleFaq(this)">Can I take photos? 
+                        <span class="faq-chevron">&#9660;</span>
+                    </button>
+                        <div class="faq-a">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-q" onclick="toggleFaq(this)">When is the RSVP deadline? 
+                        <span class="faq-chevron">&#9660;</span>
+                    </button>
+                        <div class="faq-a">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-q" onclick="toggleFaq(this)">How can we contact you? 
+                        <span class="faq-chevron">&#9660;</span>
+                    </button>
+                        <div class="faq-a">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-q" onclick="toggleFaq(this)">What do we do for gifts? 
+                        <span class="faq-chevron">&#9660;</span>
+                    </button>
+                        <div class="faq-a">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--RSVP-->  
+    <section class="rsvp-wrap" id="rsvp">
+        <div class="sec-inner">
+                <span class="ornament" style="color:var(--sage-light)">✦ ✦ ✦</span>
+                <span class="sec-tag">Kindly Reply</span>
+                <h2>Will you be there?</h2>
+                <p class="sec-sub">Please reply by date.</p>
+
+<!--RSVP Card-->  
+                <div id="rsvp-card" class="rsvp-card">
+                    <div class="rsvp-card-seal">✦</div>
+                    <div class="form-grid">
+                    <div class="form-row-2">
+                    <div class="field">
+                    <label for="fname">First name</label>
+                    <input type="text" id="fname" placeholder="Jane">
+                </div>
+
+                <div class="field">
+                    <label for="lname">Last name</label>
+                    <input type="text" id="lname" placeholder="Smith">
+                </div>
+            </div>
+
+            <div class="field">
+                <label for="email">Email address</label>
+                <input type="email" id="email" placeholder="jane@example.com">
+            </div>
+
+            <div class="field">
+                <label for="attendance">Will you be attending?</label>
+                <select id="attendance" onchange="toggleGuests(this)">
+                    <option value="">Please select...</option>
+                    <option value="full">Yes I would love to attend</option>
+                    <option value="no">Unfortunately I cannot attend</option>
+                </select>
+            </div>
+        
+            <div class="field" id="guests-field">
+                <label for="guests">How many in your party?</label>
+                <select id="guests">
+                    <option value="1">Just me</option>
+                    <option value="2">2 people</option>
+                </select>
+            </div>
+
+            <div class="field" style="display:none;" id="guests-name">
+                <label for="guests">Please Enter your guest's name.</label>
+                <input value="text" id="guest-name" placeholder="E.g John Smith">
+            </div>
+
+            <div class="field">
+                <label for="dietary">Dietary requirements</label>
+                <input type="text" id="dietary" placeholder="None / vegetarian...">
+            </div>
+
+            <div class="field">
+                <label for="message">A message (optional)</label>
+                <textarea id="message" placeholder="Share your well-wishes..."></textarea>
+            </div>
+
+            <button class="rsvp-btn" onclick="submitRsvp()">Send my RSVP</button>
+            </div>
+        </div>
+
+            <div class="rsvp-success" id="rsvp-success">
+                <h3>Thank you so much!</h3>
+                <p>Your RSVP has been received!</p>
+            </div>
+        </div>
+    </section>
+
+<!--Footer-->
+    <footer>
+        <span class="footer-names">name &amp; name</span>
+        <p class="footer-sub">date &nbsp;✦&nbsp; location</p>
+    </footer>
+
+</div>
+
+
+<script>
+// Current password is: password
+const SITE_PASSWORD = "password";
+function checkPassword() {
+    const input = document.getElementById("pw-input").value;
+    const error = document.getElementById("pw-error");
+
+    if (input === SITE_PASSWORD) {
+        document.getElementById("password-overlay").style.display = "none";
+        document.getElementById("page-content").style.display = "block";
+        error.style.display = "none";
+    } else {
+        error.style.display = "block";
+        document.getElementById("pw-input").value = "";
+        document.getElementById("pw-input").focus();
+    }
+}
+
+// FAQ Section
+function toggleFaq(btn) {
+    const item = btn.closest(".faq-item");
+    const isOpen = item.classList.contains("open");
+
+// Close any currently open items
+    document.querySelectorAll(".faq-item.open")
+    .forEach(el => el.classList.remove("open"));
+
+// Open this one (if it wasn't already open)
+    if (!isOpen) item.classList.add("open");
+}
+
+// Hides Guest count if one person is selected
+function toggleGuests(sel) {
+    document.getElementById("guests-field").style.display =
+    sel.value === "no" ? "none" : "block";
+}
+
+const guestsnumber = document.getElementById('guests');
+const guestsname = document.getElementById('guests-name');
+
+guestsnumber.addEventListener('change',
+    function(){
+        if (this.value === '2'){
+            guestsname.style.display = 'block';
+        } else{
+            guestsname.style.display = 'none';
+        }
+    }
+);
+
+//RSVP Form submit
+function submitRsvp() {
+    const name = document.getElementById("fname").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const att = document.getElementById("attendance").value;
+
+    if (!name || !email || !att) {
+        alert("Please fill in your name, email and attendance.");
+    return;
+}
+
+// Formspree connection
+    // Replace YOUR_CODE with your Formspree endpoint code
+fetch("Your_code", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ 
+        name:name,
+        email:email,
+        attendance:
+            document.getElementById('attendance').value,
+        guests:
+            document.getElementById('guests').value,
+        dietary:
+            document.getElementById('dietary').value,
+        message:
+            document.getElementById('message').value,
+     })
+
+}).then(() => {
+    document.getElementById("rsvp-card").style.display = 'none';
+    document.getElementById("rsvp-success").style.display = 'block';
+}).catch(()=> {
+    alert('Something went wrong - please try again or contact us directly.');
+});
+
+}
+</script>
+
+
+
+
+</body>
+</html>
