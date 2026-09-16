@@ -1,6 +1,6 @@
-# Wedding Invitation Site
+# Wedding Invitation Site .ᐟ
 
-🔗 **[Live demo]([https://your-site-name.netlify.app](https://wedding-invitation-demo-abc.netlify.app/))**
+🔗 **[Live demo](https://wedding-invitation-demo-abc.netlify.app/)**
 
 A single-page wedding invitation and RSVP site, built from scratch with plain HTML, CSS and
 JavaScript. No frameworks, no build step, no dependencies — open the HTML file and it runs.
@@ -12,7 +12,7 @@ posts responses straight to the couple's inbox.
 > **Note:** this repository contains a demo version with placeholder names, dates and contact
 > details. The live site used for real guests is not published here.
 
-## Features
+## Features ⋆. 𐙚 ˚
 
 - **Gated entry screen** — a cover card that hides the page contents until a password is entered
 - **Invitation hero** — stamp-and-wax-seal styling, with names, date, time and venue
@@ -24,7 +24,7 @@ posts responses straight to the couple's inbox.
   inline success state
 - **Responsive** — a mobile breakpoint at 540px
 
-## Built with
+## Built with ⋆. 𐙚 ˚
 
 - HTML5
 - CSS3 — custom properties for the sage/gold/cream palette, flexbox, `clamp()` for fluid type
@@ -33,7 +33,7 @@ posts responses straight to the couple's inbox.
 
 Typefaces are *Great Vibes*, *Cormorant Garamond* and *EB Garamond*.
 
-## Running it locally
+## Running it locally ⋆. 𐙚 ˚
 
 Clone the repo and open the file:
 
@@ -55,7 +55,7 @@ Then visit <http://localhost:8000>.
 
 The demo password is `password`.
 
-## Configuration
+## Configuration ⋆. 𐙚 ˚
 
 Everything configurable lives at the bottom of `index.html`:
 
@@ -67,18 +67,18 @@ Everything configurable lives at the bottom of `index.html`:
 Names, dates, venue, FAQ answers and contact numbers are all plain text in the markup — search and
 replace them directly.
 
-## A note on the password
+## A note on the password ⋆. 𐙚 ˚
 
 The password check runs entirely in the browser, so it keeps the page tidy rather than genuinely
 private: anyone who opens developer tools can read the password and reveal the hidden content. That
 was an acceptable trade-off here — the aim was to stop the details being stumbled upon, not to
 defend against anyone determined. Real access control would need a server.
 
-## Deploying
+## Deploying ⋆. 𐙚 ˚
 
 The site is static, so anything that serves files will host it — GitHub Pages, Netlify, Cloudflare
 Pages. For GitHub Pages: **Settings → Pages → Deploy from a branch → `main` / root**.
 
-## Licence
+## Licence ⋆. 𐙚 ˚
 
 [MIT](LICENSE)
